@@ -48,7 +48,7 @@ const Experience: React.FC = () => {
           <ExperienceCard
             company="TheCybertize"
             duration="2023-present"
-            description="I worked as a Frontend Developer at TheCybertize for a duration of one year. During my time at the company, I had the opportunity to work with cutting-edge technologies to create dynamic and user-friendly web applications. I specialized in using Next.js, React, Tailwind CSS, Redux, and Bootstrap to develop sleek and responsive user interfaces. My role at TheCybertize allowed me to contribute to the development of innovative web solutions, enhancing user experiences and ensuring the highest level of interactivity and performance"
+            description="I worked as a Frontend Developer at TheCybertize for a duration of one year. During my time at the company, I had the opportunity to work with cutting-edge technologies to create dynamic and user-friendly web applications. I specialized in using Next.js, React, Tailwind CSS, Redux, and Bootstrap to develop sleek and responsive user interfaces. My role at TheCybertize allowed me to contribute to the development of innovative web solutions, enhancing user experiences and ensuring the highest level of interactivity and performance."
             accomplishment={cybertize_accomplishment}
           />
         

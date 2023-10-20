@@ -31,6 +31,8 @@ html {
 }
 /* ----------NavLink Animation------- */
 
+
+
 @keyframes slide-up {
   0% {
     transform: translateY(20px);
@@ -64,4 +66,24 @@ html {
 
 .popping {
   animation: popping 1s ease-in-out 5;
+}
+
+
+@keyframes anim {
+  0%{
+    transform: translateY(5px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-5px);
+    opacity: .5;
+  }
+  100% {
+    transform: translateY(5px);
+    opacity: 1;
+  }
+}
+
+.animate_anim {
+  animation: anim 1.5s ease forwards infinite;
 }
