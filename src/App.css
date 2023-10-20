@@ -1,0 +1,67 @@
+html {
+  background-color: #18122b;
+}
+
+
+/* ----------NavLink Animation------- */
+.link {
+  text-decoration: none;
+  position: relative;
+  color: rgb(240, 240, 240);
+  padding: 0 0.8rem;
+  font-family: "Space Mono", monospace;
+  transition: all 0.2s ease;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background-color: rgb(6, 218, 119);
+  transform: scaleX(0); /* Initially, the line is not visible */
+  transform-origin: left center;
+  transition: transform 0.3s ease;
+}
+
+.link:hover::after {
+  transform: scaleX(1); /* The line expands to full width */
+}
+/* ----------NavLink Animation------- */
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Apply animation to the text element */
+.text-element {
+  animation: slide-up 0.5s ease forwards;
+}
+
+@keyframes popping {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.popping {
+  animation: popping 1s ease-in-out 5;
+}
