@@ -57,7 +57,7 @@ function Navbar() {
       >
         <div
           className={`p-1.5 sm:p-6 rounded-xl w-full flex items-center justify-between ${
-            isBlur ? "bg-white/10 duration-300 backdrop-blur-xl " : null
+            isBlur ? "bg-white/10 duration-300 backdrop-blur-xl shadow-md" : null
           }  duration-300`}
         >
           <div className="w-full">
