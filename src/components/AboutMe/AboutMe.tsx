@@ -32,8 +32,8 @@ const AboutMe: React.FC = () => {
   });
   return (
     <>
-      <section className="w-full mt-[12rem] grid grid-cols-5 gap-5 min-h-screen">
-        <div className="relative w-full h-[30rem] col-span-2 rounded-lg overflow-hidden opacity-0 text-element">
+      <section className="w-full mt-[4rem] sm:mt-[12rem] grid sm:grid-cols-5 gap-5 min-h-screen">
+        <div className="relative w-full h-[30rem] col-span-3 sm:col-span-2 rounded-lg overflow-hidden opacity-0 text-element">
           <div className="absolute left-0 top-0 w-full h-full bg-black opacity-30 z-10"></div>
           <img
             className="w-full h-full object-cover"
