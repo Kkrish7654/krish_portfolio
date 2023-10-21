@@ -3,7 +3,7 @@ import Homepage from "./page/Homepage"
 import Navbar from "./components/Partials/Navbar"
 import "./App.css";
 import Footer from "./components/Partials/Footer";
-import AboutMe from "./page/AboutMe";
+import About from "./page/About";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       <main className="w-full px-[1rem] sm:px-[10rem] overflow-auto">
         <Routes>
           <Route path="/" element={<Homepage/>}/>
-          <Route path="/aboutme" element={<AboutMe/>}/>
+          <Route path="/aboutme" element={<About/>}/>
         </Routes>
       </main>
       <Footer/>

@@ -49,6 +49,21 @@ html {
   animation: slide-up 0.5s ease forwards;
 }
 
+.delay-one-element {
+  animation: slide-up 0.5s ease forwards;
+  animation-delay: 250ms;
+}
+
+.delay-two-element {
+  animation: slide-up 0.5s ease forwards;
+  animation-delay: 350ms;
+}
+
+.delay-three-element {
+  animation: slide-up 0.5s ease forwards;
+  animation-delay: 450ms;
+}
+
 @keyframes popping {
   0% {
     transform: scale(1);

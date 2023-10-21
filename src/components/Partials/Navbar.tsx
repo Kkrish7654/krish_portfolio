@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 type NavLinks = {
   title: string;
@@ -8,11 +8,15 @@ type NavLinks = {
 
 const NAV_LINKS: NavLinks[] = [
   {
-    title: "About Me",
+    title: "Home",
+    path: "/",
+  },
+  {
+    title: "About",
     path: "/aboutme",
   },
   {
-    title: "Projects",
+    title: "Work",
     path: "/projects",
   },
   {
@@ -24,6 +28,7 @@ const NAV_LINKS: NavLinks[] = [
 function Navbar() {
   const [isBlur, setIsBlur] = useState<Boolean>(false);
   const [openHamburgerMenu, setOpenHamburgerMenu] = useState<Boolean>(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -61,7 +66,9 @@ function Navbar() {
                 className="hover:text-primary font-semibold text-[1.2rem] duration-200 "
                 to="/"
               >
-                My Portfolio
+                {location.pathname !== "/"
+                  ? "Krish vishwakarma"
+                  : " My Portfolio"}
               </Link>
             </h2>
           </div>
@@ -86,8 +93,24 @@ function Navbar() {
         </div>
 
         {/* ---------sidebar----------- */}
-        <div className={`${openHamburgerMenu ? "left-0 transition-all duration-500" : "left-[100%]"} transition-all duration-500 w-screen h-screen absolute top-0 left-0 bg-black`}>
+        <div
+          className={`${
+            openHamburgerMenu
+              ? "left-0 transition-all duration-500"
+              : "left-[100%]"
+          } transition-all duration-500 w-screen h-screen absolute top-0 left-0 flex flex-col gap-8 items-start  p-12 py-16 bg-[#040D12]`}
+        >
+          <ul>
+            {NAV_LINKS.map((link: NavLinks, i: number) => (
+              <li key={i}>
+                <Link onClick={handleOpenHamburger} className="text-[2.6rem] font-montserrat" to={link.path}>{link.title}</Link>
+              </li>
+            ))}
+          </ul>
 
+          <div className="w-full flex items-center justify-center p-3 border-t border-gray">
+           hello
+          </div>
         </div>
       </header>
 
@@ -95,12 +118,26 @@ function Navbar() {
       <div
         onClick={handleOpenHamburger}
         className={`${
-          openHamburgerMenu ? "-rotate-45 transition-all duration-500 bg-primary" : null
-        } transition-all duration-500 flex flex-col gap-3 fixed z-50 bottom-8 right-5 items-center justify-center w-[5rem] h-[5rem] overflow-hidden bg-black shadow-md rounded-full`}
+          openHamburgerMenu
+            ? "-rotate-45 transition-all duration-500 bg-primary"
+            : null
+        } md:hidden transition-all duration-500 flex flex-col gap-3 fixed z-50 bottom-8 right-5 items-center justify-center w-[5rem] h-[5rem] overflow-hidden bg-black shadow-md rounded-full`}
       >
-        <span className={`w-8 h-1 rounded-full  ${openHamburgerMenu ? "bg-black" : "bg-gray"}`}></span>
-        <span className={`w-12 h-1 rounded-full  ${openHamburgerMenu ? "bg-black" : "bg-gray"}`}></span>
-        <span className={`w-8 h-1 rounded-full  ${openHamburgerMenu ? "bg-black" : "bg-gray"}`}></span>
+        <span
+          className={`w-8 h-1 rounded-full  ${
+            openHamburgerMenu ? "bg-black" : "bg-gray"
+          }`}
+        ></span>
+        <span
+          className={`w-12 h-1 rounded-full  ${
+            openHamburgerMenu ? "bg-black" : "bg-gray"
+          }`}
+        ></span>
+        <span
+          className={`w-8 h-1 rounded-full  ${
+            openHamburgerMenu ? "bg-black" : "bg-gray"
+          }`}
+        ></span>
       </div>
       {/* --------Hamburger Menu Mobile screen----------- */}
     </>

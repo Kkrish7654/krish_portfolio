@@ -27,7 +27,7 @@ const HeroSection: React.FC = () => {
       <section className="text-element w-full min-h-screen flex items-center justify-start text-gray pt-[5rem] sm:mt-0 opacity-100">
         <div className="flex flex-col gap-3">
           <span className="text-sm text-primary">Hi, My name is</span>
-          <h2 className="text-[3rem] font-semibold leading-[3.5rem] uppercase">
+          <h2 className="text-[2.5rem] md:text-[3rem] font-montserrat font-semibold leading-[3.5rem] uppercase">
             Krish Vishwakarma
           </h2>
           <span className=" animate-pulse">Full Stack Developer.</span>
