@@ -2,7 +2,6 @@ html {
   background-color: #18122b;
 }
 
-
 /* ----------NavLink Animation------- */
 .link {
   text-decoration: none;
@@ -31,7 +30,11 @@ html {
 }
 /* ----------NavLink Animation------- */
 
-
+.gradient {
+  color: rgb(
+    linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%)
+  );
+}
 
 @keyframes slide-up {
   0% {
@@ -83,15 +86,14 @@ html {
   animation: popping 1s ease-in-out 5;
 }
 
-
 @keyframes anim {
-  0%{
+  0% {
     transform: translateY(5px);
     opacity: 1;
   }
   50% {
     transform: translateY(-5px);
-    opacity: .5;
+    opacity: 0.5;
   }
   100% {
     transform: translateY(5px);
