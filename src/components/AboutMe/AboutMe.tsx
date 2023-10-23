@@ -43,7 +43,7 @@ const AboutMe: React.FC = () => {
         </div>
 
         <div className="col-span-3">
-          <h2 className="delay-one-element opacity-0 text-[4rem] font-semibold text-gray underline underline-offset-4">
+          <h2 className="delay-one-element  uppercase font-montserrat opacity-0 text-[4rem] font-semibold text-gray underline underline-offset-4">
             About Me
           </h2>
           <h4 className="delay-two-element opacity-0  text-2xl font-semibold text-primary">

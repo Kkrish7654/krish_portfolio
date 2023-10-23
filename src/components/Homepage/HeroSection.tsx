@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
-
+import { Link } from "react-router-dom";
 const HeroSection: React.FC = () => {
-
   const [showArrow, setShowArrow] = useState<Boolean>(false);
 
   useEffect(() => {
@@ -13,14 +12,13 @@ const HeroSection: React.FC = () => {
       }
     };
     window.addEventListener("scroll", handleScroll);
-  
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-  console.log(showArrow)
-
+  console.log(showArrow);
 
   return (
     <>
@@ -47,11 +45,15 @@ const HeroSection: React.FC = () => {
           </p>
 
           <span>
-            <button className="mt-1 text-primary border border-primary px-4 py-2 rounded-md hover:bg-primary hover:text-black duration-200">
-              Get in touch
-            </button>
+            <Link to="/contact">
+              <button className="mt-1 text-primary border border-primary px-4 py-2 rounded-md hover:bg-primary hover:text-black duration-200">
+                Get in touch
+              </button>
+            </Link>
           </span>
-          <div className={`w-full flex items-center justify-center mt-[4rem] animate_anim`}>
+          <div
+            className={`w-full flex items-center justify-center mt-[4rem] animate_anim`}
+          >
             <svg
               className={`${showArrow ? "hidden" : null}`}
               stroke="#06DA77"

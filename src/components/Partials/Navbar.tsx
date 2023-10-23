@@ -119,23 +119,23 @@ function Navbar() {
         onClick={handleOpenHamburger}
         className={`${
           openHamburgerMenu
-            ? "-rotate-45 transition-all duration-500 bg-primary"
+            ? "-rotate-45 transition-all duration-500 bg-white"
             : null
-        } md:hidden transition-all duration-500 flex flex-col gap-3 fixed z-50 bottom-8 right-5 items-center justify-center w-[5rem] h-[5rem] overflow-hidden bg-black shadow-md rounded-full`}
+        } md:hidden transition-all duration-500 flex flex-col gap-3 fixed z-50 bottom-8 right-5 items-center justify-center w-[5rem] h-[5rem] overflow-hidden bg-primary shadow-md rounded-full`}
       >
         <span
           className={`w-8 h-1 rounded-full  ${
-            openHamburgerMenu ? "bg-black" : "bg-gray"
+            openHamburgerMenu ? "bg-black" : "bg-black"
           }`}
         ></span>
         <span
           className={`w-12 h-1 rounded-full  ${
-            openHamburgerMenu ? "bg-black" : "bg-gray"
+            openHamburgerMenu ? "bg-black" : "bg-black"
           }`}
         ></span>
         <span
           className={`w-8 h-1 rounded-full  ${
-            openHamburgerMenu ? "bg-black" : "bg-gray"
+            openHamburgerMenu ? "bg-black" : "bg-black"
           }`}
         ></span>
       </div>

@@ -34,15 +34,18 @@ const Projects: React.FC = () => {
   const motionRef = useRef<(HTMLElement | null)[]>([]);
 
   useEffect(() => {
-    motionRef.current.forEach((motion, i: number) => {
-      gsap.to(motion, {
-        opacity:1,
-        delay:0.3,
-        x: 50,
-        duration: 0.8 * i,
+    const mm = gsap.matchMedia();
+    mm.add("(min-width: 600px)", () => {
+      motionRef.current.forEach((motion, i: number) => {
+        gsap.to(motion, {
+          opacity: 1,
+          delay: 0.3,
+          x: 50,
+          duration: 0.8 * i,
+        });
       });
     });
-  },[]);
+  }, []);
   return (
     <>
       <section className="mt-[8rem] min-h-screen">
@@ -54,9 +57,13 @@ const Projects: React.FC = () => {
 
         {/* content */}
         <div className="bg-white/5 w-full p-5 rounded-lg overflow-hidden">
-          <div className="grid grid-cols-4 gap-5 -ml-[50px]">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-5 md:-ml-[50px]">
             {projectData.map((p: ProjectDataProps, i: number) => (
-              <div className=" opacity-0" ref={(el) => (motionRef.current[i] = el)} key={i}>
+              <div
+                className=" opacity-100 md:opacity-0"
+                ref={(el) => (motionRef.current[i] = el)}
+                key={i}
+              >
                 <ProjectCards
                   title={p.title}
                   description={p.description}
